@@ -4,6 +4,8 @@ Deprecated==1.2.10
 idna==2.10
 PyGithub==1.53
 PyJWT==1.7.1
+PyYAML==5.3.1
 requests==2.24.0
 urllib3==1.25.10
 wrapt==1.12.1
+yamale==3.0.4

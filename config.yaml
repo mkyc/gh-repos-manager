@@ -1,0 +1,58 @@
+name: epiphany-platform
+repos:
+  - name: m-aws-kubernetes-service
+    labels:
+      - status/grooming-needed
+      - status/hold
+      - status/ready-for-development
+      - status/awaiting-more-evidence
+      - type/backport
+      - type/bug
+      - type/feature-request
+      - type/improvement
+      - type/investigation
+      - type/management
+      - type/performance
+      - type/spike
+  - name: m-aws-basic-infrastructure
+    labels:
+      - status/grooming-needed
+      - status/hold
+      - status/ready-for-development
+      - status/awaiting-more-evidence
+      - type/backport
+      - type/bug
+      - type/feature-request
+      - type/improvement
+      - type/investigation
+      - type/management
+      - type/performance
+      - type/spike
+  - name: m-azure-basic-infrastructure
+    labels:
+      - status/grooming-needed
+      - status/hold
+      - status/ready-for-development
+      - status/awaiting-more-evidence
+      - type/backport
+      - type/bug
+      - type/feature-request
+      - type/improvement
+      - type/investigation
+      - type/management
+      - type/performance
+      - type/spike
+  - name: m-azure-kubernetes-service
+    labels:
+      - status/grooming-needed
+      - status/hold
+      - status/ready-for-development
+      - status/awaiting-more-evidence
+      - type/backport
+      - type/bug
+      - type/feature-request
+      - type/improvement
+      - type/investigation
+      - type/management
+      - type/performance
+      - type/spike

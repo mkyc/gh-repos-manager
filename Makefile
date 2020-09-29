@@ -9,14 +9,18 @@ requirements:
 	. venv/bin/activate 						;\
 	pip install -r requirements.txt
 
-run: guard-TOKEN guard-ORG
+run: guard-TOKEN
 	. venv/bin/activate 						;\
 	python main.py
 
 install:
 	. venv/bin/activate 						;\
 	pip install PyGithub 						;\
+	pip install yamale							;\
 	pip freeze > requirements.txt
+
+clean:
+	rm -rf venv
 
 guard-%:
 	@ if [ "${${*}}" = "" ]; then 				\
