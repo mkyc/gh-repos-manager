@@ -1,13 +1,43 @@
 import os
 import yamale
 from github import Github, GithubException
+from github.Label import Label
+from github.Repository import Repository
 from yamale import YamaleError
 
 
-class Repo(object):
+class MyLabel(object):
+    def __init__(self, y):
+        self.name = y['name']
+        self.description = y['description']
+        self.color = y['color']
+
+
+class MyRepository(object):
+    labels = []
+
     def __init__(self, j):
-        self.labels = j['labels']
+        for label in j['labels']:
+            self.labels.append(MyLabel(label))
         self.name = j['name']
+
+
+def remove_label_from_repository(label: Label, repository: MyRepository):
+    print("(%s) label should be not there, will delete: %s" % (repository.name, label.name))
+    try:
+        label.delete()
+    except GithubException as exception:
+        print("Wasn't able to delete label (%s): %s" % (exception.status, exception.data))
+        exit(1)
+
+
+def create_label_in_repository(repository: Repository, label: MyLabel):
+    print("(%s) label not found, will create: %s" % (repository.name, label.name))
+    try:
+        repository.create_label(label.name, label.color, label.description)
+    except GithubException as exception:
+        print("Wasn't able to create label (%s): %s" % (exception.status, exception.data))
+        exit(1)
 
 
 schema = yamale.make_schema(content="""
@@ -18,7 +48,10 @@ repo:
     name: str()
     labels: list(include('label'), min=0)
 ---
-label: str()
+label: 
+    name: str()
+    description: str()
+    color: str()
 """)
 
 data = yamale.make_data("config.yaml")
@@ -35,16 +68,19 @@ except YamaleError as e:
     exit(1)
 
 org = data[0][0]['name']
-repos = [Repo(i) for i in data[0][0]['repos']]
+repos = [MyRepository(i) for i in data[0][0]['repos']]
 
 g = Github(os.environ['TOKEN'])
 
 for repo in repos:
     try:
         ghr = g.get_organization(org).get_repo(repo.name)
-        gh_labels = [label.name for label in ghr.get_labels()]
+        gh_labels = ghr.get_labels()
         for label in repo.labels:
-            if label not in gh_labels:
-                print("in repo %s label %s not found!" % (repo.name, label))
+            if label.name not in [label.name for label in gh_labels]:
+                create_label_in_repository(ghr, label)
+        for label in gh_labels:
+            if label.name not in [label.name for label in repo.labels]:
+                remove_label_from_repository(label, repo)
     except GithubException as e:
         print("repo %s not found!" % repo.name)
