@@ -17,26 +17,39 @@ class MyRepository(object):
     labels = []
 
     def __init__(self, j):
-        for label in j['labels']:
-            self.labels.append(MyLabel(label))
+        for _label in j['labels']:
+            self.labels.append(MyLabel(_label))
         self.name = j['name']
 
 
-def remove_label_from_repository(label: Label, repository: MyRepository):
-    print("(%s) label should be not there, will delete: %s" % (repository.name, label.name))
+def remove_label_from_repository(_label: Label, _repository: MyRepository):
+    print("(%s) label should be not there, will delete: %s" % (_repository.name, _label.name))
     try:
-        label.delete()
+        _label.delete()
     except GithubException as exception:
         print("Wasn't able to delete label (%s): %s" % (exception.status, exception.data))
         exit(1)
 
 
-def create_label_in_repository(repository: Repository, label: MyLabel):
-    print("(%s) label not found, will create: %s" % (repository.name, label.name))
+def create_label_in_repository(_repository: Repository, _label: MyLabel):
+    print("(%s) label not found, will create: %s" % (_repository.name, _label.name))
     try:
-        repository.create_label(label.name, label.color, label.description)
+        _repository.create_label(_label.name, _label.color, _label.description)
     except GithubException as exception:
         print("Wasn't able to create label (%s): %s" % (exception.status, exception.data))
+        exit(1)
+
+
+def is_label_unused(_label: Label, _repository: Repository) -> bool:
+    try:
+        _gh_labels = _repository.get_issues(labels=[_label.name])
+        if _gh_labels.totalCount != 0:
+            return False
+        else:
+            return True
+    except GithubException as exception:
+        print("Wasn't able to get issues filtered by label  %s: (%s) %s" % (
+            _label.name, exception.status, exception.data))
         exit(1)
 
 
@@ -81,6 +94,9 @@ for repo in repos:
                 create_label_in_repository(ghr, label)
         for label in gh_labels:
             if label.name not in [label.name for label in repo.labels]:
-                remove_label_from_repository(label, repo)
+                if is_label_unused(label, ghr):
+                    remove_label_from_repository(label, repo)
+                else:
+                    print("Label %s is used and will not be removed by automation" % label.name)
     except GithubException as e:
         print("repo %s not found!" % repo.name)
