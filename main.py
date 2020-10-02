@@ -12,14 +12,25 @@ class MyLabel(object):
         self.description = y['description']
         self.color = y['color']
 
+    def __str__(self):
+        return "\t - name: {}\n\t   description: {}\n\t   color: #{}\n".format(self.name, self.description, self.color)
+
 
 class MyRepository(object):
-    labels = []
 
     def __init__(self, j):
+        self.labels = []
         for _label in j['labels']:
             self.labels.append(MyLabel(_label))
         self.name = j['name']
+
+    def __str__(self):
+        s = "name: {}\n".format(self.name)
+        if len(self.labels) > 0:
+            s += "labels ({}):\n".format(len(self.labels))
+        for _label in self.labels:
+            s += "{}\n".format(_label)
+        return s
 
 
 def remove_label_from_repository(_label: Label, _repository: MyRepository):
@@ -97,6 +108,6 @@ for repo in repos:
                 if is_label_unused(label, ghr):
                     remove_label_from_repository(label, repo)
                 else:
-                    print("Label %s is used and will not be removed by automation" % label.name)
+                    print("(%s) label is used and will not be removed by automation: %s" % (repo.name, label.name))
     except GithubException as e:
         print("repo %s not found!" % repo.name)
