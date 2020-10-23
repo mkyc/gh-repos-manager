@@ -1,5 +1,136 @@
 name: epiphany-platform
 repos:
+  - name: epiphany
+    labels:
+      - name: area/ansible
+        description: Ansible plays some role in this task
+        color: 0052cc
+      - name: area/development
+        description: Task is development
+        color: 0052cc
+      - name: area/docs
+        description: Task is documentation
+        color: 0052cc
+      - name: area/ignite
+        description: Ignite plays some role in this task
+        color: 0052cc
+      - name: area/kafka
+        description: Kafka plays some role in this task
+        color: 0052cc
+      - name: area/keycloak
+        description: KeyCloak plays some role in this task
+        color: 0052cc
+      - name: area/kubernetes
+        description: Kubernetes plays some role in this task
+        color: 0052cc
+      - name: area/logs
+        description: Task is related to logging
+        color: 0052cc
+      - name: area/monitoring
+        description: Task touches monitoring topics
+        color: 0052cc
+      - name: area/postgres
+        description: PostgreSQL plays some role in this task
+        color: 0052cc
+      - name: area/rabbit
+        description: RabbitMQ plays some role in this task
+        color: 0052cc
+      - name: area/security
+        description: Task touches security topics
+        color: 0052cc
+      - name: area/storage
+        description: Task touches storage topics
+        color: 0052cc
+      - name: area/terraform
+        description: Terraform plays some role in this task
+        color: 0052cc
+      - name: area/testing
+        description: Task is related to testing
+        color: 0052cc
+      - name: area/timeseries
+        description: Timeseries databases plays some role in this task
+        color: 0052cc
+      - name: area/vault
+        description: Vault plays some role in this task
+        color: 0052cc
+      - name: dependencies
+        description: Pull requests that update a dependency file
+        color: 0052cc
+      - name: Epic
+        description: Epic task to gather group of related tasks
+        color: 3e4b9e
+      - name: provider/any
+        description: Task related to epiphany ANY provider
+        color: ac39e5
+      - name: provider/aws
+        description: Task related to epiphany AWS provider
+        color: ac39e5
+      - name: provider/azure
+        description: Task related to epiphany AZURE provider
+        color: ac39e5
+      - name: size/L
+        description: none
+        color: ee9900
+      - name: size/M
+        description: none
+        color: eebb00
+      - name: size/S
+        description: none
+        color: 77bb00
+      - name: size/XL
+        description: none
+        color: ee5500
+      - name: size/XS
+        description: none
+        color: "009900"
+      - name: status/grooming-needed
+        description: More grooming is required
+        color: f7dd1d
+      - name: status/hold
+        description: Do not start this task
+        color: f7d5c5
+      - name: status/ready-for-development
+        description: This can be taken
+        color: 623ae8
+      - name: type/backport
+        description: Backport to feature or bug to previous minor versions
+        color: c1f9a9
+      - name: type/bug
+        description: Bug in existing feature
+        color: d73a4a
+      - name: type/feature-request
+        description: New feature requested
+        color: 43ce21
+      - name: type/improvement
+        description: Improvement of existing feature (not a bug)
+        color: bfd4f2
+      - name: type/performance
+        description: none
+        color: 29799e
+      - name: type/spike
+        description: Gain knowledge necessary to reduce the risk of a technical approach
+        color: afffc1
+      - name: source/jira
+        description: This task origins from internal JIRA
+        color: f9c9b8
+      - name: source/confluence
+        description: This task origins from internal Confluence
+        color: f9c9b8
+      - name: source/community
+        description: This comes from comunity
+        color: f9c9b8
+      - name: priority/critical
+        description: Show-stopper! You better start it now
+        color: eb6420
+      - name: priority/high
+        description: Task with high priority
+        color: eb6420
+      - name: priority/medium
+        description: Task with medium priority
+        color: eb6420
+      - name: priority/low
+        description: Task with low priority
+        color: eb6420
   - name: m-aws-kubernetes-service
     labels:
       - name: status/grooming-needed
