@@ -68,21 +68,6 @@ repos:
       - name: provider/azure
         description: Task related to epiphany AZURE provider
         color: ac39e5
-      - name: size/L
-        description: none
-        color: ee9900
-      - name: size/M
-        description: none
-        color: eebb00
-      - name: size/S
-        description: none
-        color: 77bb00
-      - name: size/XL
-        description: none
-        color: ee5500
-      - name: size/XS
-        description: none
-        color: "009900"
       - name: status/grooming-needed
         description: More grooming is required
         color: f7dd1d
