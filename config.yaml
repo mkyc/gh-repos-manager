@@ -74,9 +74,6 @@ repos:
       - name: status/hold
         description: Do not start this task
         color: f7d5c5
-      - name: status/ready-for-development
-        description: This can be taken
-        color: 623ae8
       - name: type/backport
         description: Backport to feature or bug to previous minor versions
         color: c1f9a9
@@ -123,9 +120,6 @@ repos:
         color: f7dd1d
       - name: status/hold
         description: Do not start this task
-        color: f7dd1d
-      - name: status/ready-for-development
-        description: This can be taken
         color: f7dd1d
       - name: status/awaiting-more-evidence
         description: Bug requires additional confirmation
@@ -174,9 +168,6 @@ repos:
       - name: status/hold
         description: Do not start this task
         color: f7dd1d
-      - name: status/ready-for-development
-        description: This can be taken
-        color: f7dd1d
       - name: status/awaiting-more-evidence
         description: Bug requires additional confirmation
         color: f7dd1d
@@ -223,9 +214,6 @@ repos:
         color: f7dd1d
       - name: status/hold
         description: Do not start this task
-        color: f7dd1d
-      - name: status/ready-for-development
-        description: This can be taken
         color: f7dd1d
       - name: status/awaiting-more-evidence
         description: Bug requires additional confirmation
@@ -274,9 +262,6 @@ repos:
       - name: status/hold
         description: Do not start this task
         color: f7dd1d
-      - name: status/ready-for-development
-        description: This can be taken
-        color: f7dd1d
       - name: status/awaiting-more-evidence
         description: Bug requires additional confirmation
         color: f7dd1d
@@ -324,9 +309,6 @@ repos:
       - name: status/hold
         description: Do not start this task
         color: f7dd1d
-      - name: status/ready-for-development
-        description: This can be taken
-        color: f7dd1d
       - name: status/awaiting-more-evidence
         description: Bug requires additional confirmation
         color: f7dd1d
@@ -373,9 +355,6 @@ repos:
         color: f7dd1d
       - name: status/hold
         description: Do not start this task
-        color: f7dd1d
-      - name: status/ready-for-development
-        description: This can be taken
         color: f7dd1d
       - name: status/awaiting-more-evidence
         description: Bug requires additional confirmation
