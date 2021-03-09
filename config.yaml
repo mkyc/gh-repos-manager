@@ -92,6 +92,9 @@ repos:
       - name: type/spike
         description: Gain knowledge necessary to reduce the risk of a technical approach
         color: afffc1
+      - name: type/release
+        description: Release related task
+        color: 4d48a3
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -139,6 +142,9 @@ repos:
       - name: type/spike
         description: Gain knowledge necessary to reduce the risk of a technical approach
         color: 29799e
+      - name: type/release
+        description: Release related task
+        color: 4d48a3
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -186,6 +192,9 @@ repos:
       - name: type/spike
         description: Gain knowledge necessary to reduce the risk of a technical approach
         color: 29799e
+      - name: type/release
+        description: Release related task
+        color: 4d48a3
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -233,6 +242,9 @@ repos:
       - name: type/spike
         description: Gain knowledge necessary to reduce the risk of a technical approach
         color: 29799e
+      - name: type/release
+        description: Release related task
+        color: 4d48a3
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -280,6 +292,9 @@ repos:
       - name: type/spike
         description: Gain knowledge necessary to reduce the risk of a technical approach
         color: 29799e
+      - name: type/release
+        description: Release related task
+        color: 4d48a3
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -327,6 +342,9 @@ repos:
       - name: type/spike
         description: Gain knowledge necessary to reduce the risk of a technical approach
         color: 29799e
+      - name: type/release
+        description: Release related task
+        color: 4d48a3
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -374,6 +392,9 @@ repos:
       - name: type/spike
         description: Gain knowledge necessary to reduce the risk of a technical approach
         color: 29799e
+      - name: type/release
+        description: Release related task
+        color: 4d48a3
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -421,6 +442,9 @@ repos:
       - name: type/spike
         description: Gain knowledge necessary to reduce the risk of a technical approach
         color: 29799e
+      - name: type/release
+        description: Release related task
+        color: 4d48a3
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -468,6 +492,59 @@ repos:
       - name: type/spike
         description: Gain knowledge necessary to reduce the risk of a technical approach
         color: 29799e
+      - name: type/release
+        description: Release related task
+        color: 4d48a3
+      - name: source/jira
+        description: This task origins from internal JIRA
+        color: f9c9b8
+      - name: source/confluence
+        description: This task origins from internal Confluence
+        color: f9c9b8
+      - name: source/community
+        description: This comes from comunity
+        color: f9c9b8
+      - name: priority/critical
+        description: Show-stopper! You better start it now
+        color: eb6420
+      - name: priority/high
+        description: Task with high priority
+        color: eb6420
+      - name: priority/medium
+        description: Task with medium priority
+        color: eb6420
+      - name: priority/low
+        description: Task with low priority
+        color: eb6420
+  - name: m-host-init
+    labels:
+      - name: status/grooming-needed
+        description: More grooming is required
+        color: f7dd1d
+      - name: status/hold
+        description: Do not start this task
+        color: f7dd1d
+      - name: status/awaiting-more-evidence
+        description: Bug requires additional confirmation
+        color: f7dd1d
+      - name: type/backport
+        description: Backport to feature or bug to previous minor versions
+        color: 29799e
+      - name: type/bug
+        description: Bug in existing feature
+        color: 29799e
+      - name: type/feature-request
+        description: New feature requested
+        color: 29799e
+      - name: type/improvement
+        description: Improvement of existing feature (not a bug)
+        color: 29799e
+      - name: type/spike
+        description: Gain knowledge necessary to reduce the risk of a technical approach
+        color: 29799e
+      - name: type/release
+        description: Release related task
+        color: 4d48a3
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
