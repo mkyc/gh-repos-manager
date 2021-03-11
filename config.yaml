@@ -53,6 +53,12 @@ repos:
       - name: area/vault
         description: Vault plays some role in this task
         color: 0052cc
+      - name: area/loadbalancer
+        description: Loadbalancer plays some role in this task
+        color: 0052cc
+      - name: area/repository
+        description: Repository related topics in this task
+        color: 0052cc
       - name: dependencies
         description: Pull requests that update a dependency file
         color: 0052cc
@@ -95,6 +101,9 @@ repos:
       - name: type/release
         description: Release related task
         color: 4d48a3
+      - name: type/low-hanging-fruit
+        description: Good, nice, simple task
+        color: 1cc12d
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -145,6 +154,9 @@ repos:
       - name: type/release
         description: Release related task
         color: 4d48a3
+      - name: type/low-hanging-fruit
+        description: Good, nice, simple task
+        color: 1cc12d
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -195,6 +207,9 @@ repos:
       - name: type/release
         description: Release related task
         color: 4d48a3
+      - name: type/low-hanging-fruit
+        description: Good, nice, simple task
+        color: 1cc12d
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -245,6 +260,9 @@ repos:
       - name: type/release
         description: Release related task
         color: 4d48a3
+      - name: type/low-hanging-fruit
+        description: Good, nice, simple task
+        color: 1cc12d
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -295,6 +313,9 @@ repos:
       - name: type/release
         description: Release related task
         color: 4d48a3
+      - name: type/low-hanging-fruit
+        description: Good, nice, simple task
+        color: 1cc12d
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -345,6 +366,9 @@ repos:
       - name: type/release
         description: Release related task
         color: 4d48a3
+      - name: type/low-hanging-fruit
+        description: Good, nice, simple task
+        color: 1cc12d
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -395,6 +419,9 @@ repos:
       - name: type/release
         description: Release related task
         color: 4d48a3
+      - name: type/low-hanging-fruit
+        description: Good, nice, simple task
+        color: 1cc12d
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -445,6 +472,9 @@ repos:
       - name: type/release
         description: Release related task
         color: 4d48a3
+      - name: type/low-hanging-fruit
+        description: Good, nice, simple task
+        color: 1cc12d
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -495,6 +525,9 @@ repos:
       - name: type/release
         description: Release related task
         color: 4d48a3
+      - name: type/low-hanging-fruit
+        description: Good, nice, simple task
+        color: 1cc12d
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
@@ -545,6 +578,9 @@ repos:
       - name: type/release
         description: Release related task
         color: 4d48a3
+      - name: type/low-hanging-fruit
+        description: Good, nice, simple task
+        color: 1cc12d
       - name: source/jira
         description: This task origins from internal JIRA
         color: f9c9b8
